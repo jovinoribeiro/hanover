@@ -9,8 +9,8 @@ var app = angular.module('CervejaMe',
 	]);
 
 //Update this before commiting and deploing to Heroku
-//app.constant('CURRENT_BACKEND', 'http://localhost:3000');
-app.constant('CURRENT_BACKEND', 'https://cervejame.herokuapp.com');
+app.constant('CURRENT_BACKEND', 'http://localhost:3000');
+//app.constant('CURRENT_BACKEND', 'https://cervejame.herokuapp.com');
 
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider 
