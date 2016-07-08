@@ -1,6 +1,6 @@
 angular.module('Cerveja.Beers')
 	.controller('BeersCtrl', 
-		function($http, $routeParams) {
+		function($http, $routeParams, CURRENT_BACKEND) {
 
 			var beersCtrl = this;
 
@@ -10,7 +10,7 @@ angular.module('Cerveja.Beers')
 
 			beersCtrl.getAllBeers = function() {
 				beersCtrl.pageTitle = "Display lists of all possible beers";
-				$http.get('http://localhost:3000/brewerydb/beer/all')
+				$http.get(CURRENT_BACKEND + '/brewerydb/beer/all')
 				.then (function(result) {
 					beersCtrl.beers = result.data.data;
 				});				
@@ -18,7 +18,7 @@ angular.module('Cerveja.Beers')
 
 			beersCtrl.getBeerByName = function(beerName) {
 				beersCtrl.pageTitle = "Display lists of your beer of choice";
-				$http.get('http://localhost:3000/brewerydb/beer/name/' + beerName)
+				$http.get(CURRENT_BACKEND + '/brewerydb/beer/name/' + beerName)
 				.then (function (result) {
 					beersCtrl.beers = result.data.data;					
 				});
