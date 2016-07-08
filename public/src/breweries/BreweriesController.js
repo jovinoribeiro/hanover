@@ -1,6 +1,6 @@
 angular.module('Cerveja.Breweries')
 	.controller('BreweriesCtrl', 
-		function($http, $routeParams, CURRENT_BACKEND) {
+		function($routeParams, BreweriesModel) {
 
 			var breweriesCtrl = this;
 
@@ -8,19 +8,22 @@ angular.module('Cerveja.Breweries')
 
 			breweriesCtrl.getAllBreweries = function() {
 
-				$http.get(CURRENT_BACKEND + '/brewerydb/brewery/all')
-				.then (function(result) {
-					
-					breweriesCtrl.breweries = result.data.data;
-
-				});		
+				BreweriesModel.all()
+					.then(function(result) {
+						breweriesCtrl.breweries = result;
+					}, function(reason) {
+						console.log('REASON:'+ reason);	
+					});
 			};
 
 			breweriesCtrl.getBreweryByName = function(breweryName) {
-				$http.get(CURRENT_BACKEND + '/brewerydb/brewery/name/' + breweryName)
-				.then(function(result) {
-					breweriesCtrl.breweries = result.data.data;
-				});
+
+				BreweriesModel.fetchByName(breweryName)
+					.then(function(result) {
+						breweriesCtrl.breweries = result;	
+					}, function(reason) {
+						console.log('REASON:'+ reason);	
+					});
 			};
 
 			if (breweriesCtrl.name != null) {
