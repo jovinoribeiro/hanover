@@ -1,0 +1,37 @@
+<style>
+    .beers {
+
+        
+        height:120px;
+    }
+
+</style>
+
+<div ng-controller='BeersCtrl as beersCtrl'>
+    <div class="container text-center">
+        <br> 
+        <h1>Beer List</h1>
+        <h2 class="thin">Here are all the beers available</h2>
+        <!-- <p class="text-muted">
+            The difference between involvement and commitment is like an eggs-and-ham breakfast:<br> 
+            the chicken was involved; the pig was committed.
+        </p> -->
+    </div>
+
+    <div class='jumbotron top-space'>
+        <div class='container text-center' >
+            <div class='row'>
+                <div class='col-md-2 col-sm-6 beers' ng-repeat='beer in beersCtrl.beers'>
+                    <a class="thumbnail" href="#/beers/id/{{beer.id}}">
+                        <div>
+                            <img class="img-response" src="{{beer.labels.icon}}"/>
+                        </div>
+                        <div style="text-align:center;">
+                            {{ beer.name }} 
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

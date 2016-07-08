@@ -1,0 +1,182 @@
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+<!--         <div class="row">
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+        </div> -->
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+<!--         <div class="row">
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+        </div> -->
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+<!--         <div class="row">
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+        </div> -->
+        <!-- /.row -->
+
+       <!--  <hr> -->
+
+        <!-- Pagination -->
+    <!--     <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+        <!-- /.row -->
+
+       <!--  <hr> -->
+
+        <!-- Footer -->
+        <!-- <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div> -->
+            <!-- /.row -->
+       <!--  </footer> -->
+
+    </div>
+
+<div ng-controller='HomeCtrl as home'>
+<h1>Beer World</h1>
+
+<button ng-click="home.getAllBeers()">Get All Beers</button> <br />
+<input type='text' ng-model='beerName'></input>
+<button ng-click='home.getBeerByName(beerName)'>Get By Beer Name</button>
+<br /> <br />
+
+<!--   <div class="container">
+
+  
+        <div class="row" >
+            <div class="col-md-3 portfolio-item" ng-repeat="beer in home.beers">
+				<div>
+					<span ><img style="text-align: center;margin:auto auto;" src="{{beer.labels.medium}}"/></span>
+					<div style="text-align:center; margin:auto auto;">{{ beer.name }} </div><br />
+					
+				</div>
+            </div>
+        </div>    	
+
+  </div>   -->      
+
+
+     <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Thumbnail Gallery</h1>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-12 thumb" ng-repeat="beer in home.beers">
+                <a class="thumbnail" href="#">
+                    <div style="text-align:center;"><img class="img-response" src="{{beer.labels.icon}}"/></div>
+                    <div style="text-align:center;">{{ beer.name }} </div>
+                    <p>{{beer.description}}</p>
+                </a>
+                
+            </div>
+        </div>
+    </div>  	
+
+<!-- <div style="float:left; padding-5px; margin:20px;" ng-repeat="beer in home.beers">
+	<span ><img style="text-align: center;margin:auto auto;" src="{{beer.labels.medium}}"/></span>
+	<div style="text-align:center; margin:auto auto;">{{ beer.name }} </div><br />
+	<p>{{ beer.description }}	</p>
+</div> -->
+
+
+</div>
+
+

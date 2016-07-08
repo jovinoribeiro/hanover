@@ -1,0 +1,30 @@
+beer
+- get a list of avaiables
+- search by name
+
+
+
+brewery
+- get a list by zip code
+- for each brewery displays all available beers
+
+-------------------------------------------------
+
+-Categories - gives me a list of beer types
+/categories
+
+GET: /menu/styles (describes the different categories)
+Gets a listing of beer styles
+
+-Featuree beer of week-could use this for showing off a beer on website
+featured
+
+-Hops
+hops
+
+-Ingredients
+/ingredients
+
+-display by locations
+/locations?postalCode=94606
+

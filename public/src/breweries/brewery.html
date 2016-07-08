@@ -1,0 +1,16 @@
+<h1>Brewery by id</h1>
+
+<div ng-controller="BreweryCtrl as breweryCtrl">
+
+
+	<p>Name: {{breweryCtrl.brewery.name}}</p>
+	<p>Established: {{breweryCtrl.brewery.established}}</p>
+	<p>Organic: {{breweryCtrl.brewery.isOrganic}}</p>
+	<p>Website: {{breweryCtrl.brewery.website}}</p>
+	<p>Description: {{breweryCtrl.brewery.description}}</p>
+	<p>
+		<img src='{{breweryCtrl.brewery.images.large}}' />
+	</p>
+	
+
+</div>

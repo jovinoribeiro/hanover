@@ -1,0 +1,29 @@
+doctype html
+html(ng-app='CervejaMe')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    link(rel='stylesheet', media='screen', href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
+    link(rel='stylesheet', href='/src/assets/css/bootstrap-theme.css', media='screen')
+    link(rel='stylesheet', href='src/assets/css/font-awesome.min.css')   
+    link(rel='stylesheet', href='/src/assets/css/main.css') 
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js')
+    script(src='/src/assets/js/headroom.min.js')
+    script(src='/src/assets/js/jQuery.headroom.min.js')
+    script(src='/src/assets/js/template.js')
+    script(src='/src/beers/Beers.js')
+    script(src='/src/beers/BeersController.js')
+    script(src='/src/beers/Beer.js')
+    script(src='/src/beers/BeerController.js')
+    script(src='/src/breweries/Breweries.js')
+    script(src='/src/breweries/BreweriesController.js')
+    script(src='/src/breweries/Brewery.js')
+    script(src='/src/breweries/BreweryController.js')
+    script(src='/javascripts/cervejame.js')
+  body
+    block content

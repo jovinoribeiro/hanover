@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+	<div class="container">
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+	<a class="navbar-brand" href="#/">Cerveja Me</a>
+	</div>
+	<div class="navbar-collapse collapse">
+	<ul class="nav navbar-nav pull-right">
+	<li class='active'><a href='#/'>Home</a></li>
+	<li class="active"><a href="#/beers">Beers</a></li>
+	<li><a href="#/breweries">Brewery</a></li>
+	</ul>
+	</div>
+	</div>
+	</div> 
+	<br /><br />
+	div(ng-view)
