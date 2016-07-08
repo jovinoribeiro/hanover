@@ -7,7 +7,7 @@ angular.module('CervejaMe')
 			service.all = function() {
 				return $http.get(CURRENT_BACKEND + '/brewerydb/brewery/all')
 				.then ( function(result) {
-					return result.data.data.
+					return result.data.data;
 				});
 			};
 
