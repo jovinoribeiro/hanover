@@ -1,27 +1,30 @@
 angular.module('Cerveja.Beers')
 	.controller('BeersCtrl', 
-		function($http, $routeParams, CURRENT_BACKEND) {
+		function($routeParams, BeersModel) {
 
 			var beersCtrl = this;
 
 			beersCtrl.name = $routeParams['name'];
-			console.info('name:' + beersCtrl.name);
 			
-
 			beersCtrl.getAllBeers = function() {
-				beersCtrl.pageTitle = "Display lists of all possible beers";
-				$http.get(CURRENT_BACKEND + '/brewerydb/beer/all')
-				.then (function(result) {
-					beersCtrl.beers = result.data.data;
-				});				
+				BeersModel.all()
+					.then(function(result) {
+						beersCtrl.beers = result;
+						console.log("all beers: " + beersCtrl.beers);
+					}, function(reason) {
+						console.log('REASON:'+ reason);	
+					});
+					
 			};
 
 			beersCtrl.getBeerByName = function(beerName) {
-				beersCtrl.pageTitle = "Display lists of your beer of choice";
-				$http.get(CURRENT_BACKEND + '/brewerydb/beer/name/' + beerName)
-				.then (function (result) {
-					beersCtrl.beers = result.data.data;					
-				});
+
+				BeersModel.fetchByName(beerName)
+					.then( function(result) {
+						beersCtrl.beers = result;	
+					}, function(reason) {
+						console.log('REASON:' + reason);
+					});
 			};
 
 			if (beersCtrl.name != null) {
