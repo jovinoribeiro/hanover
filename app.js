@@ -18,7 +18,7 @@ var router = express.Router();
 
 router.get("/beer/all", function (req, res) {
   console.log('in get /beer/all');
-  request.get({ url: "https://api.brewerydb.com/v2/beers?styleId=3&hasLabels=Y&key=4e7d623f860337f84e64c5be5c80f8ea"},
+  request.get({ url: "http://api.brewerydb.com/v2/beers?styleId=3&hasLabels=Y&key=4e7d623f860337f84e64c5be5c80f8ea"},
     function(error, response, body) {
       res.json(JSON.parse(body));
     });
@@ -27,7 +27,7 @@ router.get("/beer/all", function (req, res) {
 router.get('/beer/name/:name', function(req, res) {
   console.log('in /beer/name');
   var beerName = req.params.name;
-    request.get({ url: "https://api.brewerydb.com/v2/beers?name=" + beerName + "&hasLabels=Y&key=4e7d623f860337f84e64c5be5c80f8ea"},
+    request.get({ url: "http://api.brewerydb.com/v2/beers?name=" + beerName + "&hasLabels=Y&key=4e7d623f860337f84e64c5be5c80f8ea"},
     //request.get({ url: "http://api.brewerydb.com/v2/search?q=" + beerName + "&hasLabels=Y&type=beer&key=4e7d623f860337f84e64c5be5c80f8ea"},
     function(error, response, body) {
         res.json(JSON.parse(body));
@@ -38,7 +38,7 @@ router.get('/beer/id/:id', function(req, res) {
   console.log('in /beer/id');
   var beerId = req.params.id;
   console.info('beerId=' + beerId);
-  var inurl = "https://api.brewerydb.com/v2/beer/" + beerId + "?key=4e7d623f860337f84e64c5be5c80f8ea";
+  var inurl = "http://api.brewerydb.com/v2/beer/" + beerId + "?key=4e7d623f860337f84e64c5be5c80f8ea";
   console.info(inurl);
   request.get({ url: inurl }, 
     function(error, response, body) {
@@ -49,7 +49,7 @@ router.get('/beer/id/:id', function(req, res) {
 
 router.get('/brewery/all', function(req, res) {
   console.log('in /brewery/all');
-  request.get({ url: "https://api.brewerydb.com/v2/breweries?established=2015&hasImages=Y&key=4e7d623f860337f84e64c5be5c80f8ea"},
+  request.get({ url: "http://api.brewerydb.com/v2/breweries?established=2015&hasImages=Y&key=4e7d623f860337f84e64c5be5c80f8ea"},
     function(error, response, body) {
       res.json(JSON.parse(body));
     });
@@ -58,7 +58,7 @@ router.get('/brewery/all', function(req, res) {
 router.get('/brewery/name/:name', function(req, res) {
   console.log('in /brewery/name/');
   var breweryName = req.params.name;
-  request.get({ url: "https://api.brewerydb.com/v2/breweries?name=" + breweryName + "&key=4e7d623f860337f84e64c5be5c80f8ea"}, 
+  request.get({ url: "http://api.brewerydb.com/v2/breweries?name=" + breweryName + "&key=4e7d623f860337f84e64c5be5c80f8ea"}, 
     function(error, response, body) {
       res.json(JSON.parse(body));
     });
@@ -68,7 +68,7 @@ router.get('/brewery/id/:id', function(req, res) {
   console.log('in /brewery/id');
   var breweryId = req.params.id;
   console.log(breweryId);
-  var inurl = 'https://api.brewerydb.com/v2/brewery/' + breweryId + "?key=4e7d623f860337f84e64c5be5c80f8ea";
+  var inurl = 'http://api.brewerydb.com/v2/brewery/' + breweryId + "?key=4e7d623f860337f84e64c5be5c80f8ea";
   request.get( { url: inurl},
     function(error, response, body) {
       res.json(JSON.parse(body));
@@ -78,7 +78,7 @@ router.get('/brewery/id/:id', function(req, res) {
 router.get('/brewery/postalCode/:postalCode', function(req, res) {
   console.log('in /brewery/postalCode');
   var postalCode = req.params.postalCode;
-  request.get({ url: "https://api.brewerydb.com/v2/locations?postalCode=" + postalCode + "&key=4e7d623f860337f84e64c5be5c80f8ea"},
+  request.get({ url: "http://api.brewerydb.com/v2/locations?postalCode=" + postalCode + "&key=4e7d623f860337f84e64c5be5c80f8ea"},
     function(error, response, body) {
       res.json(JSON.parse(body));
     });
