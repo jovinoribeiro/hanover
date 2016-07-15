@@ -25,12 +25,7 @@ app.config(['$routeProvider', function($routeProvider) {
 			controller: 'BeersCtrl',
 			controllerAs: 'beersCtrl'
 		})
-		.when('/forms/:rental_app', {
-			templateUrl: 'src/beers/beers.html',
-			controller: 'BeersCtrl',
-			controllerAs: 'beersCtrl'
-		})
-		.when('/beers/id/:id', {
+		.when('/forms/rental_app', {
 			templateUrl: 'src/beers/beer.html',
 			controller: 'BeerCtrl',
 			controllerAs: 'beerCtrl'
