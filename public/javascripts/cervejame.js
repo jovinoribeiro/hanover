@@ -7,7 +7,7 @@ var app = angular.module('CervejaMe',
 		'Cerveja.Breweries',
 		'Cerveja.Brewery'
 	]);
-
+ 
 //Update this before commiting and deploing to Heroku
 
 //app.constant('CURRENT_BACKEND', 'http://localhost:3000');
@@ -20,7 +20,7 @@ app.config(['$routeProvider', function($routeProvider) {
 			controller: 'BeersCtrl',
 			controllerAs: 'beers'*/
 		})
-		.when('/beers', {
+		.when('/beers', { 
 			templateUrl: 'src/beers/beers.html',
 			controller: 'BeersCtrl',
 			controllerAs: 'beersCtrl'

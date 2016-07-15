@@ -16,7 +16,7 @@ angular.module('Cerveja.Beer')
 					beerCtrl.beer = result.data.data;
 					console.info(beerCtrl.beer);
 				});
-			};
+			}; 
 
 			/*beerCtrl.getBeerById(beerCtrl.beerId);*/
 

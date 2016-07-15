@@ -68,7 +68,7 @@ hr.star-primary:after {
   margin: 0 auto;
 }
 header {
-  text-align: center;
+  text-align: center; 
   background-color: #da9b19;
   background: url('../img/lake.jpg') no-repeat center;
   background-size:100% 80%;
