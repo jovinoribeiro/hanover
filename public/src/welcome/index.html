@@ -4,12 +4,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- <img class="img-responsive" src="/src/assets/img/profile.png" alt=""> -->
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <!-- <img class="img-responsive" src="/src/assets/img/lake.jpg" alt=""> -->
+                    <br /><br />
                     <div class="intro-text">
-                        <span class="name" style='background-color:white;margin-bottom:115px;'>Cerveja Me</span>
-                        <hr class="star-light">
-                        <p class="skills">Beers - Breweries</p>
+                        <span class="name" style='margin-bottom:55px;color:'>322 Hanover #302</span>
+                        <!-- <hr class="star-light"> -->
+                       <!--  <p class="skills">2 bedroom / 2 bath - Spacious condo with views of the gorgeous Lake Merritt</p> -->
                         <!-- <p class="text-center skills">Everything you need to know before you have a good time</p> -->
                     </div>
                 </div>
@@ -18,7 +18,7 @@
     </header>
 
     <!-- About Section -->
-    <section class="success" id="about">
+    <section class="success" id="about" style="display:none;background-color:#31b0d5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -46,47 +46,59 @@
     </section>
 
     <!-- Search-->
-    <section id="portfolio">
+    <section id="portfolio" style="padding: 0px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6 highlight">
                     <div class="h-caption">
-                        <h2><!-- <i class="fa fa-beer fa-6"></i> -->Beers</h2>
-                        <img src='/src/assets/img/background1.png'/>
-
+                        <h2>
+                            <i class="fa fa-bars"></i>current postings</h2>
+                        <!-- <img src='/src/assets/img/background1.png'/>
+ --><br />
                     </div>
                     <div class="h-body text-center">
-                        <p>Whether you want to know about your favorites or if you are in a mood for something new, we have what you need. Enter you favorite beer name, and click "Pour my favorite", or let us show 
-                        a few new beers by clicking on "Show me a few" - The Abyss    ?</p>
+                        <p>Our unit is currenly listed in the following sites</p>
                     </div>
                     <div class="h-body text-center">
-                        <div class='form-inline form-group'>
+                        <!-- <div class='form-inline form-group'>
                             <input ng-model='beerName' class='form-control text-center' type='text' placeholder='Beer Name'>
                             <a href='#/beers/name/{{ beerName }}' class='btn btn-warning' role='button'>POUR MY FAVORITE
                             </a>
-                        </div>
-                        <a href='#/beers' class='btn btn-warning' role='button'>
+                        </div> -->
+                        <!-- <a href='#/beers' class='btn btn-warning' role='button'>
                             SHOW ME A FEW
-                        </a>
+                        </a> -->
+                       <div class='form-inline form-group'>
+                            <a target='_blank' href='http://www.zillow.com/homedetails/Hanover-Ave-Oakland-CA-94606/2136059140_zpid/?view=public'  style='color:#2466b0;' role='button'>
+                                ZILLOW
+                            </a>
+                        </div>
+                        <div class='form-inline form-group'>
+                            <a target='_blank' href='http://sfbay.craigslist.org/eby/apa/5683473676.html' style='color:#2466b0;' role='button'>
+                                CRAIGSLIST
+                            </a>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 highlight">
                     <div class="h-caption">
-                        <h2><!-- <i class="fa fa-heart fa-6"></i> -->Breweries</h2>
-                            <img src='/src/assets/img/background4.png'/>
+                        <h2><i class="fa fa-print fa-6"></i>FORMS</h2> <br />                           
                     </div>
                     <div class="h-body text-center">
-                        <p>Curious about what your favorite spot is currently brewing? Enter the name of your pub, and then click "My favorite stop". If you feel like trying a new avenue, let us show you some cool places. Just click on "Take me around" - Bare Bones Brewery?</p>
+                        <p>Here is some important documents we need</p>
                     </div>
                     <div class="h-body text-center">
                         <div class='form-inline form-group'>
-                            <input ng-model='breweryName' class='form-control text-center' type='text' placeholder='Brewery Name'>
-                            <a href='#/breweries/name/{{breweryName}}' class='btn btn-warning' role='button'>MY FAVORITE STOP
+                            <a href='#/forms/{{rental_app}}' style='color:#2466b0;' role='button'>
+                                RENTAL APPLICATION FORM
                             </a>
                         </div>
-                        <a href='#/breweries' class='btn btn-warning btn-lg btn-outline"' role='button'>
-                            <i class="fa fa-map fa-5">TAKE ME AROUND</i>
-                        </a>
+                        <div class='form-inline form-group'>
+                            <a href='#/breweries' role='button' style='color:#2466b0;'>
+                                CREDIT/BACKGROUND REPORT REQUEST
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -94,7 +106,7 @@
         </div>
     </section>
 
-
+<BR /><BR /><BR />
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio" style='display:none;'>
@@ -171,20 +183,20 @@
     </section>
 
     <!-- About Section -->
-    <section class="success" id="about" >
+    <section class="success" id="about" style="background-color:#2466b0;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>About</h2>
+                    <h2>Description</h2>
                     <hr class="star-light">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>We are a just a bunch of geeks who loves coding and beer. We love to spend our time creating new things, and of course, drinking a cold beer.</p>
+                    <p class="skills">2 bedroom / 2 bath - Spacious condo with views of the gorgeous Lake Merritt</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Whether you're a beer connoisseurs or someone new to the awesomeness of craft beers, this is the place for you. Here you will find everything you need to know before you have a good time.</p>
+                    <p>Use the links from current postings above for more information</p>
                 </div>
                 <!-- <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">

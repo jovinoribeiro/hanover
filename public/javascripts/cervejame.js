@@ -25,7 +25,7 @@ app.config(['$routeProvider', function($routeProvider) {
 			controller: 'BeersCtrl',
 			controllerAs: 'beersCtrl'
 		})
-		.when('/beers/name/:name', {
+		.when('/forms/:rental_app', {
 			templateUrl: 'src/beers/beers.html',
 			controller: 'BeersCtrl',
 			controllerAs: 'beersCtrl'

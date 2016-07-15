@@ -18,7 +18,7 @@ angular.module('Cerveja.Beer')
 				});
 			};
 
-			beerCtrl.getBeerById(beerCtrl.beerId);
+			/*beerCtrl.getBeerById(beerCtrl.beerId);*/
 
 		}
 	);
